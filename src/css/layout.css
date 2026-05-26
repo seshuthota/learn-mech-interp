@@ -22,7 +22,7 @@ main {
 
 /* Article body - optimal reading width (60-75 chars) */
 .article-body {
-  max-width: var(--content-width, 65ch);
+  max-width: var(--content-width, 70ch);
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--container-padding, 1.5rem);
@@ -49,7 +49,7 @@ main {
 
 /* Prose container - centered readable content */
 .prose {
-  max-width: var(--content-width, 65ch);
+  max-width: var(--content-width, 70ch);
   margin-left: auto;
   margin-right: auto;
 }
@@ -97,37 +97,25 @@ main {
   /* Page-level grid: sidebar + main content */
   .page-layout {
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: minmax(208px, var(--page-sidebar-width, 220px)) minmax(0, 1fr);
     max-width: none;
     margin: 0;
   }
 }
 
-/* Wide screen breakpoint (1400px+) */
-/* Prepares layout for future margin notes - Distill's approach */
-/* Content stays centered with room for margin columns on sides */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1400px;
-  }
-
-  /* Article layout: centered content with margin room */
+/* Wide screen breakpoint */
+@media (min-width: 1280px) {
   .article {
-    display: grid;
-    grid-template-columns: 1fr minmax(auto, var(--content-width-wide, 80ch)) 1fr;
-    gap: 0;
-  }
-
-  .article > * {
-    grid-column: 2;
-  }
-
-  .article-header {
-    grid-column: 2;
+    display: block;
+    width: min(100%, var(--article-shell-width, 1120px));
+    margin-left: clamp(var(--spacing-lg, 1.5rem), 3vw, var(--spacing-2xl, 3rem));
+    margin-right: auto;
   }
 
   .article-body {
     position: relative;
     overflow: visible;
+    max-width: none;
+    margin: 0;
   }
 }

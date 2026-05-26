@@ -21,6 +21,14 @@ glossary:
     definition: "The vector produced by applying the value weight matrix (W_V) to a token's representation. Value vectors carry the content information that gets written to the residual stream, weighted by the attention pattern."
 ---
 
+<figure>
+  <video controls preload="metadata" style="width: 100%; max-width: 900px; border-radius: 10px;">
+    <source src="/topics/attention-mechanism/images/attention_mechanism_explainer_v3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>Attention mechanism walkthrough animation: intuition, equation, worked example, causal masking, and multi-head attention.</figcaption>
+</figure>
+
 ## Why Attention?
 
 Consider the sentence: *"The cat sat on the mat because it was tired."* What does "it" refer to? For a human reader the answer is obvious: "it" means the cat. But arriving at this answer requires looking back across the sentence and connecting a pronoun to the noun it references. A model that processes each token in isolation, without any ability to look at other positions, has no way to make this connection.

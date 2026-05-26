@@ -63,11 +63,14 @@
   --spacing-section: 4rem;
 
   /* Layout */
-  --content-width: 65ch;
-  --content-width-wide: 80ch;
+  --content-width: 70ch;
+  --content-width-wide: 86ch;
   --container-padding: 1.5rem;
   --edge-padding: 1.25rem;
   --container-max-width: 1200px;
+  --page-sidebar-width: 220px;
+  --article-shell-width: 1500px;
+  --article-toc-width: 190px;
 
   /* Border Radius */
   --radius-sm: 3px;

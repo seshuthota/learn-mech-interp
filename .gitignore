@@ -1,8 +1,19 @@
 # Dependencies
 node_modules/
+.venv/
+.venv-*/
+*.pyc
+__pycache__/
 
 # Eleventy build output
 _site/
+
+# Generated animation artifacts
+media/
+animations/attention-mechanism/media/
+animations/attention-mechanism/manim_env/
+animations/attention-mechanism/concat.txt
+*.mp4
 
 # OS files
 .DS_Store
